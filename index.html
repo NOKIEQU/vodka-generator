@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodka Generator</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <h1>Vodka drinker Simulator</h1>
+    <img src="images/download.jpg" alt="">
+    <button id="vodka" class="vodka" onclick="addimage();">Click for vodka</button>
+
+    <div id="breeki">
+        
+    </div>
+
+    <script type="text/javascript">
+          var num = 0;
+          var multi = 7
+          var bb = document.getElementById('breeki')
+        function addimage() { 
+          var img = document.createElement("img");
+          img.src = "images/vodka.jpg"; 
+          img.height = 64; 
+          img.width = 64;
+
+          var class_name = "bottle";
+          img.setAttribute("class", class_name)
+          bb.appendChild(img);
+          num++;
+          if (num === multi) {
+            if (multi >= 10) {
+                var newh1 = document.createElement("h1");
+                newh1.innerHTML = "You're dead!"
+                document.body.appendChild(newh1)
+                var button = document.getElementById('vodka')
+                button.remove();
+                var list = document.getElementsByClassName("bottle");
+            for(var i = list.length - 1; 0 <= i; i--)
+            if(list[i] && list[i].parentElement)
+            list[i].parentElement.removeChild(list[i]);
+                num = 0 
+                multi = 7
+                return
+            }
+            
+            num = 0
+            multi = multi + 2
+            var newh1 = document.createElement("h1");
+            newh1.innerHTML = "*Vomits* You drank too much vodka!"
+            document.body.appendChild(newh1)
+            var list = document.getElementsByClassName("bottle");
+            for(var i = list.length - 1; 0 <= i; i--)
+            if(list[i] && list[i].parentElement)
+            list[i].parentElement.removeChild(list[i]);
+            
+            }
+
+            
+        }
+</script>
+</body>
+</html>

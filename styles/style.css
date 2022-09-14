@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-color: #1E1E1E;
+}
+
+.vodka {
+    margin-top: 20px;
+    padding: 2rem;
+    color: #933939;
+    background-color: #292929;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+}
+
+.vodkadiv {
+    background-color: green;
+}
+
+h1 {
+    color: white;
+}
